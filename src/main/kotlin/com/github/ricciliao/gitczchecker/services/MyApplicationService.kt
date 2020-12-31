@@ -1,6 +1,6 @@
-package org.jetbrains.plugins.template.services
+package com.github.ricciliao.gitczchecker.services
 
-import org.jetbrains.plugins.template.MyBundle
+import com.github.ricciliao.gitczchecker.MyBundle
 
 class MyApplicationService {
 
