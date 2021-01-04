@@ -8,12 +8,17 @@
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.ricciliao.gitczchecker.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.ricciliao.gitczchecker.services.MyProjectService"/>
+        <checkinHandlerFactory implementation="com.github.ricciliao.gitczchecker.handler.CheckGtiMessageFactory"
+                               order="first"/>
     </extensions>
 
-    <applicationListeners>
-        <listener class="com.github.ricciliao.gitczchecker.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </applicationListeners>
+    <actions>
+        <action id="Commit.Button" class="com.github.ricciliao.gitczchecker.action.GitMessageAction"
+                text="Create git message"
+                description="Create git message"
+                icon="/icons/load.png">
+            <add-to-group group-id="Vcs.MessageActionGroup" anchor="first"/>
+        </action>
+    </actions>
+
 </idea-plugin>
