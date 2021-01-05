@@ -7,10 +7,10 @@
     <!-- https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
 
-    <extensions defaultExtensionNs="com.intellij">
+    <!--<extensions defaultExtensionNs="com.intellij">
         <checkinHandlerFactory implementation="com.github.ricciliao.gitczchecker.handler.CheckGtiMessageFactory"
                                order="first"/>
-    </extensions>
+    </extensions>-->
 
     <actions>
         <action id="Commit.Button" class="com.github.ricciliao.gitczchecker.action.GitMessageAction"
