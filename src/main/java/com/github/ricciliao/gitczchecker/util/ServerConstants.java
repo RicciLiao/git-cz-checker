@@ -6,6 +6,8 @@ public class ServerConstants {
     public static final String FORMAT_JIRA_LINK_URL = "https://aslpsc.atlassian.net/browse/DHCIMSB-%s";
     public static final String FORMAT_GIT_MESSAGE_WITH_JIRA = "%s(%s): %s #%s";
     public static final String FORMAT_GIT_MESSAGE = "%s(%s): %s";
+    public static final String FORMAT_GIT_MESSAGE_NONE_SCOPE = "%s: %s";
+    public static final String FORMAT_GIT_MESSAGE_NONE_SCOPE_WITH_JIRA = "%s: %s #%s";
     public static final String TITLE_PANEL = "Create Git Message";
 
 }

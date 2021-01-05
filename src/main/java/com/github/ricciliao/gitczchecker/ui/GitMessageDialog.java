@@ -32,16 +32,30 @@ public class GitMessageDialog extends DialogWrapper {
 
     public String getCommitMessage() {
         if (panel.getOutOfJiraValue()) {
+            if (StringUtils.isBlank(panel.getChangeScopeValue())) {
+                return String.format(ServerConstants.FORMAT_GIT_MESSAGE_NONE_SCOPE,
+                        panel.getChangeTypeValue(),
+                        panel.getShortDescriptionValue());
+            }
+
             return String.format(ServerConstants.FORMAT_GIT_MESSAGE,
                     panel.getChangeTypeValue(),
                     panel.getChangeScopeValue(),
                     panel.getShortDescriptionValue());
+        } else {
+            if (StringUtils.isBlank(panel.getChangeScopeValue())) {
+                return String.format(ServerConstants.FORMAT_GIT_MESSAGE_NONE_SCOPE_WITH_JIRA,
+                        panel.getChangeTypeValue(),
+                        panel.getShortDescriptionValue(),
+                        String.format(ServerConstants.FORMAT_JIRA_LINK_URL, panel.getJiraNumValue()));
+            }
+
+            return String.format(ServerConstants.FORMAT_GIT_MESSAGE_WITH_JIRA,
+                    panel.getChangeTypeValue(),
+                    panel.getChangeScopeValue(),
+                    panel.getShortDescriptionValue(),
+                    String.format(ServerConstants.FORMAT_JIRA_LINK_URL, panel.getJiraNumValue()));
         }
-        return String.format(ServerConstants.FORMAT_GIT_MESSAGE_WITH_JIRA,
-                panel.getChangeTypeValue(),
-                panel.getChangeScopeValue(),
-                panel.getShortDescriptionValue(),
-                String.format(ServerConstants.FORMAT_JIRA_LINK_URL, panel.getJiraNumValue()));
     }
 
     @Override
@@ -54,29 +68,29 @@ public class GitMessageDialog extends DialogWrapper {
     private boolean passValidation() {
         boolean result = true;
         if (StringUtils.isBlank(panel.getChangeTypeValue())) {
-            panel.getChangeTypeError().setVisible(true);
+            panel.getChangeTypeError().setText("x");
             result = false;
         } else {
-            panel.getChangeTypeError().setVisible(false);
+            panel.getChangeTypeError().setText("");
         }
-        if (StringUtils.isBlank(panel.getChangeScopeValue())) {
-            panel.getChangeScopeError().setVisible(true);
+        /*if (StringUtils.isBlank(panel.getChangeScopeValue())) {
+            panel.getChangeScopeError().setText("x");
             result = false;
         } else {
-            panel.getChangeScopeError().setVisible(false);
-        }
+            panel.getChangeScopeError().setText("");
+        }*/
         if (StringUtils.isBlank(panel.getShortDescriptionValue())) {
-            panel.getShortDescriptionError().setVisible(true);
+            panel.getShortDescriptionError().setText("x");
             result = false;
         } else {
-            panel.getShortDescriptionError().setVisible(false);
+            panel.getShortDescriptionError().setText("");
         }
         if ((!panel.getOutOfJiraValue())
                 && StringUtils.isBlank(panel.getJiraNumValue())) {
-            panel.getJiraNumError().setVisible(true);
+            panel.getJiraNumError().setText("x");
             result = false;
         } else {
-            panel.getJiraNumError().setVisible(false);
+            panel.getJiraNumError().setText("");
         }
 
         return result;

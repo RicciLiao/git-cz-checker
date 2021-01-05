@@ -14,7 +14,7 @@
         </constraints>
         <properties>
           <labelFor value="b857c"/>
-          <text value=" Scope*"/>
+          <text value=" Scope"/>
         </properties>
       </component>
       <component id="c1cec" class="javax.swing.JLabel">
@@ -88,7 +88,11 @@
       </component>
       <component id="44cf9" class="javax.swing.JLabel" binding="changeTypeError">
         <constraints>
-          <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="16" height="-1"/>
+            <preferred-size width="16" height="-1"/>
+            <maximum-size width="16" height="-1"/>
+          </grid>
         </constraints>
         <properties>
           <alignmentY value="0.0"/>
@@ -98,8 +102,8 @@
           <foreground color="-1048576"/>
           <horizontalAlignment value="0"/>
           <horizontalTextPosition value="0"/>
-          <text value="×"/>
-          <visible value="false"/>
+          <text value=""/>
+          <visible value="true"/>
         </properties>
         <clientProperties>
           <html.disable class="java.lang.Boolean" value="true"/>
@@ -113,11 +117,16 @@
         </constraints>
         <properties>
           <margin top="2" left="6" bottom="2" right="6"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="df629" class="javax.swing.JLabel" binding="changeScopeError">
         <constraints>
-          <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="16" height="-1"/>
+            <preferred-size width="16" height="-1"/>
+            <maximum-size width="16" height="-1"/>
+          </grid>
         </constraints>
         <properties>
           <alignmentY value="0.0"/>
@@ -127,8 +136,8 @@
           <foreground color="-1048576"/>
           <horizontalAlignment value="0"/>
           <horizontalTextPosition value="0"/>
-          <text value="×"/>
-          <visible value="false"/>
+          <text value=""/>
+          <visible value="true"/>
         </properties>
         <clientProperties>
           <html.disable class="java.lang.Boolean" value="true"/>
@@ -136,7 +145,11 @@
       </component>
       <component id="946f0" class="javax.swing.JLabel" binding="shortDescriptionError">
         <constraints>
-          <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="16" height="-1"/>
+            <preferred-size width="16" height="-1"/>
+            <maximum-size width="16" height="-1"/>
+          </grid>
         </constraints>
         <properties>
           <alignmentY value="0.0"/>
@@ -146,8 +159,8 @@
           <foreground color="-1048576"/>
           <horizontalAlignment value="0"/>
           <horizontalTextPosition value="0"/>
-          <text value="×"/>
-          <visible value="false"/>
+          <text value=""/>
+          <visible value="true"/>
         </properties>
         <clientProperties>
           <html.disable class="java.lang.Boolean" value="true"/>
@@ -155,7 +168,11 @@
       </component>
       <component id="faa5a" class="javax.swing.JLabel" binding="jiraNumError">
         <constraints>
-          <grid row="3" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="3" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="16" height="-1"/>
+            <preferred-size width="16" height="-1"/>
+            <maximum-size width="16" height="-1"/>
+          </grid>
         </constraints>
         <properties>
           <alignmentY value="0.0"/>
@@ -165,8 +182,8 @@
           <foreground color="-1048576"/>
           <horizontalAlignment value="0"/>
           <horizontalTextPosition value="0"/>
-          <text value="×"/>
-          <visible value="false"/>
+          <text value=""/>
+          <visible value="true"/>
         </properties>
         <clientProperties>
           <html.disable class="java.lang.Boolean" value="true"/>
